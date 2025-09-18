@@ -48,7 +48,7 @@ namespace FrontAuth.WebApi.Controllers
             await HttpContext.SignInAsync("AuthCookie", principal);
             return RedirectToAction("Index", "Home");
         }
-        //Post: logout
+        //Logout
         // Cierra la sesión del usuario actual y lo redirige a la página de login.
         [HttpPost]
         public async Task<IActionResult> Logout()
@@ -56,7 +56,7 @@ namespace FrontAuth.WebApi.Controllers
             await HttpContext.SignOutAsync("AuthCookie");
             return RedirectToAction("Login");
         }
-        //Post: mostrar registro
+        //GET: mostrar registro
         // Muestra el formulario de registro de un nuevo usuario.
         [HttpGet]
         public IActionResult Registrar()
