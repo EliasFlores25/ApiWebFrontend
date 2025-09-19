@@ -13,7 +13,7 @@ namespace FrontAuth.WebApi.Controllers
 
         //Get: mostrar login
         // Muestra el formulario de inicio de sesión.
-        [HttpPost]
+        [HttpGet]
         public IActionResult Login() { return View(); }
 
         //Post: Login
